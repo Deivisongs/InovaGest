@@ -1,0 +1,50 @@
+CREATE DATABASE inovaGest;
+
+USE inovaGest;
+
+CREATE TABLE boletos(
+		cod_boleto Int(10) Primary key auto_increment,
+		beneficiario Varchar(300),
+		vlrPagamento Float(30),
+		vencimento Date
+);
+
+INSERT INTO boletos(beneficiario, vlrPagamento, vencimento)
+VALUES('Google', '1000.00','2024-01-25');
+
+INSERT INTO boletos(beneficiario, vlrPagamento, vencimento)
+VALUES('Facebook', '1000.00','2024-01-29');
+
+INSERT INTO boletos(beneficiario, vlrPagamento, vencimento)
+VALUES('Hotmart', '1000.00','2024-02-30');
+
+CREATE TABLE estoque(
+		cod_produto Int Primary key auto_increment,
+		descricao Varchar(300),
+		quantidade Int,
+		valor Float,
+		vlrEstoque Double,
+		cod_fornecedor INT,
+		data_cadastro Date
+);
+
+INSERT INTO estoque(descricao, quantidade, valor, vlrEstoque, cod_fornecedor, data_cadastro)
+VALUES('Coca-Cola', 10, 10.00, quantidade*valor, 001, CURDATE());
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(255) NOT NULL,
+    senha VARCHAR(255) NOT NULL
+);
+
+-- Adicione o usuário admin com a senha hash '1234'
+INSERT INTO usuarios (usuario, senha) VALUES ('admin', '1234');
+
+
+
+
+
+
+
+
+
