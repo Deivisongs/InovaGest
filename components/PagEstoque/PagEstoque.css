@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+input:focus{
+    outline: 0;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    padding: 20px;
+    height: 100%;
+}
+.divTitle{
+    font-size: 30px;
+    color: #004530;
+}
+.form{
+    width: 50%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+    border-radius: 30px;
+    border: 2px solid #004530;
+    margin: 20px 0 40px 0;
+}
+.form input{
+    width: 95%;
+    height: 100%;
+    border: none;
+    background: transparent;
+}
+.form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+}
+.form button span{
+    color: #004530;
+}
+.form button:hover{
+    cursor: pointer;
+    font-weight: 700;
+    background-color: #004530;
+    border-radius: 13px;
+    transform: translateX(+7px);
+    padding: 0 5px;
+    font-size: 7px;
+    color: white;
+}
+.container table{
+    width: 100%;
+    text-align: left;
+}
+.container table td{
+    height: 30px;
+    border-bottom: 1px solid #d1d1d1 ;
+}
+.table-topo{
+    position: sticky;
+    top: 0;
+    background-color: #e8e8e8;
+}
+.container > .tableConteudo{
+    max-height: 370px;
+    overflow: auto;
+}
+.tableCod{
+    width: 17%;
+}
+.tableDescricao{
+    width: 50%;
+}
+.tableQtd{
+    width: 6%;
+}
+.vlr{
+    width: 10%;
+}
+.vlrEstoque{
+    width: 10%;
+}
+
+@keyframes balanca {
+    0%{
+        transform: rotateZ(-7deg);
+    }
+    20%{
+        transform: rotateZ(+7deg);
+    }
+    40%{
+        transform: rotateZ(-4deg);
+    }
+    60%{
+        transform: rotateZ(+4deg);
+    }
+    80%{
+        transform: rotateZ(0deg);
+    }
+
+    
+}
+
+@media(max-width: 960px){
+    table tr th, table tr td{
+        font-size: 13px;
+    }
+}
+@media(max-width: 600px){
+    .divTitle{
+        font-size: 25px;
+    }
+    table tr th, table tr td{
+        font-size: 13px;
+    }
+    .vlrEstoque{
+        display: none;
+    }
+}
+@media(max-width: 510px){
+    .container{
+        padding: 5px;
+    }
+    table tr th, table tr td{
+        font-size: 11px;
+    }
+}
+@media(max-width: 380px){
+    .tableCod{
+        display: none;
+    }
+}
+@media(max-width: 320px){
+    .container{
+        padding: 2px;
+    }
+    table tr th, table tr td{
+        font-size: 9px;
+    }
+}

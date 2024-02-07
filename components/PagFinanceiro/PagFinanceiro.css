@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+input:focus{
+    outline: 0;
+}
+a{
+    text-decoration: none;
+}
+hr{
+    margin: 10px 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container > div{
+    width: 99%;
+    padding: 10px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.116);
+}
+/* Contas Info*/
+
+.divContas{
+    display: flex;
+    justify-content: space-between;
+
+}
+.divContentLeft > hr{
+    width: 250px;
+}
+
+.divContas .divContentLeft{
+    height: 115px;
+}
+.divContas .divContentLeft > div{
+    display:  flex;
+}
+
+.infoText span{
+    color: #bd0f0f;
+}
+.infoText p{
+    align-items: center;
+    font-weight: 600;
+    color: #545454;
+}
+.infoConteudo p{
+    color: #545454;
+}
+.infoConteudo .infoConteudoDiv{
+    transform: translateY(-12px);
+    margin-left: 5px;
+}
+.infoConteudo .infoConteudoDiv h2{
+    color: #bd0f0f;
+    font-size: 50px;
+    font-weight: 800;
+}
+.infoConteudo .infoConteudoDiv p{
+    transform: translateY(-7px);
+    text-align: center;
+    font-weight: 600;
+}
+.divContentRigth .infoText{
+    width: 100%;
+    color: #545454;
+}
+.divContentRigth .infoText > p{
+    color: #545454;
+}
+.divContentRigth{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.infoConteudos{
+    height: 60px;
+    color: #bd0f0f;
+    display: flex;
+}
+.infoConteudos p{
+    font-weight: 600;
+    margin-right: 10px;
+    color: #545454;
+}
+.infoConteudos h2{
+    font-size: 60px;
+    font-weight: 800;
+    transform: translateY(-17px);
+}
+
+/* Cadastrar Boleto */
+
+.divCadastrar hr{
+    width: 250px;
+}
+
+.divCadastrar .infoText{
+    display: flex;
+    gap: 5px;
+    color: #004aad;
+}
+.divCadastrar .divForm form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.divCadastrar input{
+    height: 30px;
+    background: #d8d8d8;
+    border: none;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+#beneficiario{
+    width: 40%;
+    min-width: 200px;
+}
+#valor{
+    width: 20%;
+    min-width: 110px;
+}
+#btnCadastrar{
+    width: 100px;
+    background-color: #004aad;
+    color: white;
+    font-weight: 600;
+}
+#btnCadastrar:hover{
+    background: #003170;
+
+}
+.divTabela{
+    height: 310px;
+}
+.divTabela .infoText{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    color: #545454;
+}
+.divTabela .infoText > .infoTextleft{
+    display: flex;
+    gap: 5px;
+    color: #545454;
+}
+.btnDelet{
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #bd0f0f;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.178);
+    font-weight: 500;
+}
+.btnDelet span{
+    color: white;
+    font-size: 20px;
+}
+.btnDelet:hover{
+    background: #8f0b0b;
+}
+.btnDelet:hover span{
+    animation: balanca 1s infinite linear ;
+}
+
+.divTabela table{
+    width: 100%;
+}
+.divTabela table td{
+    height: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+}
+.divTabela .tableList{
+    height: 220px;
+    overflow: auto;
+}
+.divTabela table th{
+    text-align: left;
+}
+.topo-tabela{
+    position: sticky;
+    top: 0;
+    background-color: #f4f4f4;
+}
+.divTabela table td{
+    text-align: left;
+}
+.tableCod{
+    width: 15%;
+}
+.tableBeneficiario{
+    width: 50%;
+}
+.tableVlr{
+    width: 20%;
+}
+.tableVencimento{
+    text-align: right;
+    width: 15%;
+}
+.tableBtnTopo{
+    display: flex;
+    justify-content: center;
+    color: transparent;
+}
+
+@keyframes balanca {
+    0%{
+        transform: rotateZ(-7deg);
+    }
+    20%{
+        transform: rotateZ(+7deg);
+    }
+    40%{
+        transform: rotateZ(-4deg);
+    }
+    60%{
+        transform: rotateZ(+4deg);
+    }
+    80%{
+        transform: rotateZ(0deg);
+    }
+
+    
+}
+
+@media(max-width: 715px){
+    .divTabela table{
+        font-size: 13px;
+    }
+    #beneficiario{
+        width: 100%;
+    }
+    #valor{
+        width: 49%;
+    }
+    #date{
+        width: 49%;
+    }
+    #btnCadastrar{
+        width: 100%;
+    }
+}
+@media(max-width: 630px){
+    .divTabela table{
+        font-size: 11px;
+    }
+}
+@media(max-width: 510px){
+    .divTabela table{
+        font-size: 9px;
+    }
+    .btnDelet span{
+        font-size: 15px;
+    }
+    .divContentRigth{
+        display: none;
+    }
+
+}
+@media(max-width: 380px){
+
+}
+@media(max-width: 320px){
+
+}

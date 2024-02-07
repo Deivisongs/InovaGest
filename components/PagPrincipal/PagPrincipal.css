@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+input:focus{
+    outline: 0;
+}
+a{
+    text-decoration: none;
+}
+section{
+    width: 100vw;
+    height: 100vh;
+    background: #e8e8e8;
+    display: flex;
+}
+
+.btnHome{
+    padding: 15px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #004530;
+    border: none;
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.123);
+}
+
+aside{
+    width: 25vw;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #efefef;
+    padding: 5vh 0 0 0;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.116);
+}
+aside div{
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+aside div button{
+    display: none;
+    background: transparent;
+    padding: 5px;
+    color: #004530;
+}
+aside div button:hover{
+    background: rgba(0, 0, 0, 0.144);
+}
+aside div a{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+aside div a img{
+    width: 150px;
+}
+nav{
+    width: 100%;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+nav ul li:hover a{
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.377);
+    background-color: #004530;
+    color: white;
+}
+nav ul li a{
+    width: 100%;
+    height: 100%;
+    color: #004530;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 15px;
+}
+nav ul li a:hover span{
+    animation: balanca 1s infinite linear ;
+}
+nav ul li a p{
+    font-weight: 700;
+}
+
+aside form{
+    display: flex;
+    flex-direction: column;
+}
+aside button{
+    display: flex;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: 1s;
+    background: transparent;
+}
+aside button:hover{
+    background: transparent;
+    border: none;
+}
+aside button  div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    color: white;
+    background-color: #004530;
+    border-radius: 50%;
+    transition: 600ms;
+}
+aside button div:hover{
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.164);
+    transform: scale(1.05);
+}
+aside button div:hover span{
+    animation: balanca 1s infinite linear ;
+}
+
+.divIframePrincipal{
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+}
+.divIframePrincipal iframe{
+    width: 100%;
+    height: 100%;
+}
+#infoVersion{
+    font-size: 10px;
+    color:#a1a1a1;
+    margin: 20px 0 15px 0;
+}
+
+@keyframes balanca {
+    0%{
+        transform: rotateZ(-7deg);
+    }
+    20%{
+        transform: rotateZ(+7deg);
+    }
+    40%{
+        transform: rotateZ(-4deg);
+    }
+    60%{
+        transform: rotateZ(+4deg);
+    }
+    80%{
+        transform: rotateZ(0deg);
+    }
+
+    
+}
+@media(max-width: 800px){
+    section{
+        max-height: 100vh;
+    }
+    aside{
+        position: absolute;
+        height: 100vh;
+        width: 90vw;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #efefef;
+        padding: 5vh 0 0 0;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.116);
+    }
+    aside div button{
+        display: flex;
+    }
+    aside div a{
+        justify-content: center;
+    }
+    .btnHome{
+        display: flex;
+    }
+    section{
+        height: 100vh;
+    }
+    .divIframePrincipal{
+        height: 100vh;
+        padding: 25px 10px;
+    }
+
+}

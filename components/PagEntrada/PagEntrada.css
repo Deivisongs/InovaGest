@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+input:focus{
+    outline: 0;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+.divTitle{
+    font-size: 30px;
+    color: #004530;
+    margin-bottom: 30px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 60px;
+    border-radius: 10px;
+    background: #f4f4f4;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.096);
+}
+#codigo{
+    width: 30%;
+    max-width: 200px;
+    min-width: 100px;
+}
+.divDescricao input{
+    width: 100%;
+}
+.form p{
+    font-weight: 600;
+    color: #545454;
+}
+.form input{
+    height: 30px;
+    border: none;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    background: #d8d8d8;
+}
+.divInputs{
+    display: flex;
+    justify-content: space-between;
+}
+.divInputs > div{
+    font-size: 14px;
+}
+.divInputs > div > p{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.divInputs > div > p >span{
+    font-size: 15px;
+    color: #004530;
+    font-weight: 800;
+}
+.divQtde{
+    width: 13%;
+    min-width: 100px;
+}
+.divQtde input{
+    width: 100%;
+}
+.divPreco{
+    width: 25%;
+    min-width: 100px;
+}
+.divPreco input{
+    width: 100%;
+
+}
+.divTotalEstoque{
+    width: 30%;
+}
+.divTotalEstoque input{
+    width: 100%;
+}
+.divButtons{
+    height: 40px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 3px;
+}
+
+.divButtons button{
+    display: flex;
+    width: 24%;
+    gap: 1vw;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0 3vw;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);
+    color: white;
+}
+.divButtons button p{
+    color: white;
+}
+
+.divButtons button:hover span{
+    animation: balanca 1s infinite linear ;
+    cursor: pointer;
+}
+#btnCadastrar1{
+    display: none;
+}
+#btnCadastrar{
+    background: #004530;
+}
+#btnConsultar{
+    background: #d8d8d8;
+    color: #545454;
+}
+#btnConsultar p{
+    color: #545454;
+}
+#btnAtulizar{
+    background: #003780;
+}
+#btnDeletar{
+    background: #bd0f0f;
+}
+@keyframes balanca {
+    0%{
+        transform: rotateZ(-7deg);
+    }
+    20%{
+        transform: rotateZ(+7deg);
+    }
+    40%{
+        transform: rotateZ(-4deg);
+    }
+    60%{
+        transform: rotateZ(+4deg);
+    }
+    80%{
+        transform: rotateZ(0deg);
+    }
+
+    
+}
+
+
+@media(max-width: 600px){
+    .container{
+        padding: 10px;
+    }
+    .form{
+        padding: 50px 30px;
+    }
+
+    .divTitle h2{
+        font-size: 40px;
+    }
+    .divButtons button p{
+        display: none;
+    }
+}
+@media(max-width: 454px){
+    .container{
+        padding: 6px;
+    }
+    .divTitle h2{
+        font-size: 30px;
+    }
+}
+@media(max-width: 330px){
+    .container{
+        padding: 4px;
+    }
+    .divTitle h2{
+        font-size: 30px;
+    }
+    .divQtde{
+        min-width: 60px;
+    }
+    .divPreco{
+        min-width: 85px;
+    }
+}
